@@ -11,10 +11,9 @@ const sagaMiddleware = createSagaMiddleware()
 
 const middlewares = [sagaMiddleware]
 
-// if (process.env.NODE_ENV !== "production") {
-//   middlewares.push(logger)
-// }
-middlewares.push(logger)
+if (process.env.NODE_ENV !== "production") {
+  middlewares.push(logger)
+}
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)))
 
