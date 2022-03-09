@@ -1,0 +1,36 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+.slide-editor-quiz-option {
+  width: 100%;
+  border-radius: 12px;
+  font-size: 18px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 50px 1fr;
+  background: var(--color-background-1);
+  overflow: hidden;
+
+  .select-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-text-1);
+  }
+  .icon-container {
+    @include flex-center-center();
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background: var(--color-background-3);
+    &:hover {
+      background: var(--color-background-4);
+    }
+    &.active {
+      background: var(--color-main-2);
+      .select-icon {
+        fill: var(--color-white);
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../../styles/mixins.scss";
+.settings-container {
+  @include flex-center-center();
+  gap: 20px;
+  width: 100%;
+  .setting-container {
+    @include flex-center-center-column();
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 12px;
+    background: var(--color-background-2);
+    color: var(--color-text-2);
+    cursor: pointer;
+    font-weight: 600;
+    &.active {
+      letter-spacing: 1px;
+      background: var(--color-main-2);
+      color: var(--color-white);
+      .icon-theme {
+        fill: var(--color-white);
+      }
+    }
+    .icon-theme {
+      width: 120px;
+      height: 120px;
+      padding: 10px;
+      fill: var(--color-text-1);
+    }
+  }
+}

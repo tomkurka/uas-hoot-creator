@@ -1,0 +1,63 @@
+@import "../../../styles/mixins.scss";
+
+.slide-game-preview {
+  position: relative;
+  width: 100%;
+  .slide-game-preview-container {
+    width: 100%;
+    padding: 20px;
+    min-height: calc(100vh - 60px);
+    @include flex-spaceBetween-center-column();
+    .type-container {
+      width: 100%;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      .type {
+        background: var(--color-main-2);
+        font-size: 2vw;
+        padding: 0.5em 1em;
+        border-radius: 16px;
+        font-weight: 700;
+        color: var(--color-white);
+      }
+    }
+
+    .question {
+      font-size: 3.5vw;
+      font-weight: 500;
+      padding: 40px;
+      text-align: center;
+      background: var(--color-background-1);
+      border-radius: 16px;
+    }
+
+    .time-line-container {
+      background: var(--color-background-1);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 50px;
+      border-radius: 16px;
+
+      .time-line {
+        background: var(--color-main-2);
+        position: absolute;
+        border-radius: 16px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        animation: timeLineAnimation 6.7s linear;
+      }
+    }
+  }
+}
+
+@keyframes timeLineAnimation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}

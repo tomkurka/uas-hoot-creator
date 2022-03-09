@@ -1,0 +1,63 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+.event-navbar {
+  @include flex-center-center();
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  background: var(--color-background-1);
+  box-shadow: var(--box-shadow-medium);
+  z-index: 10000;
+
+  .event-navbar-container {
+    width: 100%;
+    padding: 0 14px;
+    @include flex-spaceBetween-center();
+
+    .name-container {
+      @include flex-center-center();
+      font-size: 22px;
+      gap: 10px;
+      .icon-logo {
+        width: 38px;
+        fill: var(--color-text-2);
+      }
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .event-setting {
+      @include flex-center-center();
+      gap: 10px;
+      .container-setting {
+        padding: 7px 12px;
+        border-radius: 6px;
+        background: var(--color-background-2);
+        @include flex-center-center();
+        gap: 10px;
+        &.highlight {
+          background: var(--color-main-2);
+          color: var(--color-white);
+          font-weight: 500;
+          cursor: pointer;
+          .icon-setting {
+            fill: var(--color-white);
+          }
+        }
+        .icon-setting {
+          width: 22px;
+          height: 22px;
+          fill: var(--color-text-2);
+          cursor: pointer;
+        }
+        span {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

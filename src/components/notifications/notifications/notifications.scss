@@ -1,0 +1,20 @@
+@import "../../../styles/mixins.scss";
+.notifications {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 100000;
+  padding: 15px;
+  width: 100%;
+  right: 0px;
+  top: 0px;
+
+  .notifications-container {
+    @include flex-center-column();
+    width: 350px;
+    gap: 15px;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+}

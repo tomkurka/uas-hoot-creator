@@ -1,0 +1,10 @@
+.editor-page {
+  height: calc(100vh);
+  width: 100%;
+  grid-template-columns: 275px 1fr 275px;
+  display: grid;
+  width: 100%;
+  & > div {
+    height: 100%;
+  }
+}

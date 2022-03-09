@@ -1,0 +1,29 @@
+@import "../../../styles/mixins.scss";
+.collection-editor-card-layer {
+  @include flex-center-center();
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .collection-editor-card {
+    background: var(--color-background-1);
+    width: 800px;
+    border-radius: 20px;
+
+    .collection-editor-card-container {
+      flex-direction: column;
+      display: flex;
+      padding: 30px;
+      gap: 20px;
+
+      .options-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+    }
+  }
+}

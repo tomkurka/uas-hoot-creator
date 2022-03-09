@@ -1,0 +1,35 @@
+@import "../../../styles/mixins.scss";
+
+.preview-collection {
+  color: var(--color-text-3);
+  width: 100%;
+  position: relative;
+  background: var(--color-background-1);
+  border-radius: 12px;
+  font-weight: 500;
+  transition: box-shadow 0.3s;
+  border: 2px solid var(--color-background-3);
+  &:hover {
+    box-shadow: var(--box-shadow-medium);
+  }
+  &.favorite {
+    color: var(--color-white);
+    background: var(--color-main-2);
+    .preview-collection-container {
+      .collection-highlight {
+        background: var(--color-main-3);
+      }
+    }
+  }
+  .preview-collection-container {
+    @include flex-center-column();
+    padding: 20px;
+    width: 100%;
+    gap: 12px;
+    .collection-highlight {
+      padding: 10px;
+      border-radius: 8px;
+      background: var(--color-background-2);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../../styles/mixins.scss";
+
+.slides-editor {
+  height: 100%;
+  padding: 15px;
+  background: var(--color-background-2);
+  border-right: 2px solid var(--color-background-3);
+
+  .slides-editor-container {
+    @include flex-spaceBetween-column();
+    height: 100%;
+    gap: 20px;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}

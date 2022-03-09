@@ -1,0 +1,10 @@
+@import "../../../styles/mixins.scss";
+
+.slide-game-vote-container {
+  min-height: calc(100vh - 60px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}

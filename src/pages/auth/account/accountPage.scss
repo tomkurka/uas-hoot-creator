@@ -1,0 +1,8 @@
+@import "../../../styles/mixins.scss";
+.account-page-container {
+  @include flex-center-center-column();
+  flex-wrap: wrap;
+  padding: 50px 0;
+  height: 100%;
+  gap: 50px;
+}

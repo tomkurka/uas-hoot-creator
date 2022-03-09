@@ -1,0 +1,23 @@
+@import "../../../styles/mixins.scss";
+
+.library-sort-icons {
+  @include flex-center-center();
+  gap: 15px;
+  span {
+    width: 40px;
+    height: 40px;
+    .sort-icon {
+      cursor: pointer;
+      fill: var(--color-text-2);
+      width: 40px;
+      height: 40px;
+      padding: 6px;
+      border-radius: 8px;
+      background: var(--color-background-2);
+      &.active,
+      &:hover {
+        fill: var(--color-main-2);
+      }
+    }
+  }
+}

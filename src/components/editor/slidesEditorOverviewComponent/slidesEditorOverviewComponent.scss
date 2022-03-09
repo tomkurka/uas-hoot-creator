@@ -1,0 +1,89 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+.slides-editor-overview-component {
+  background: var(--color-background-1);
+  border: 2px solid var(--color-background-2);
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+  transition: box-shadow 0.3s;
+  user-select: none;
+
+  &.active-slide {
+    border: 2px solid var(--color-background-4);
+  }
+  &:active {
+    transition-delay: 200ms;
+    box-shadow: var(--box-shadow-medium), var(--box-shadow-medium);
+  }
+
+  .label-container {
+    @include flex-spaceBetween-center();
+    font-weight: 600;
+    .icon-container {
+      display: flex;
+      gap: 8px;
+      .overview-container-icon {
+        width: 16px;
+        height: 16px;
+        fill: var(--color-text-1);
+      }
+    }
+  }
+
+  .preview-container {
+    @include flex-center-center-column();
+    cursor: pointer;
+    gap: 10px;
+
+    .label-question {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      max-width: 100%;
+      background: var(--color-background-2);
+      padding: 5px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .label-time {
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 4px;
+      width: 35px;
+      font-weight: 500;
+      height: 35px;
+      border: 2px solid var(--color-background-3);
+      @include flex-center-center();
+    }
+
+    .container-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-size: 8px;
+      width: 100%;
+      gap: 6px;
+      .container-option {
+        background: var(--color-background-2);
+        padding: 3px 6px;
+        overflow: hidden;
+        border-radius: 4px;
+        color: var(color-text-4);
+        &.option-active {
+          background: var(--color-main-2);
+          color: var(--color-white);
+        }
+        .label-option {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
